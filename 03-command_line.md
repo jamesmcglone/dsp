@@ -9,7 +9,20 @@ tutorial](https://web.archive.org/web/20160708171659/http://cli.learncodethehard
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > Cheat Sheet
+```
+pwd: print working directory
+ls: print directories and files
+cp: copy file to new location
+mv: move file (change name) to new location
+touch: create new file
+mkdir: create directory
+rm: delete file
+rmdir: delete directory
+pushd: move to new location, saving current location to list
+popd: return to previous location
+```
+
 
 ---
 
