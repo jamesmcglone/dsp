@@ -38,15 +38,15 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > 
+> > My Responses:
 ```
-`ls`  Lists files and directories at current or ~ location
-`ls -a`  Lists all files, does not ignore those starting with '.'
-`ls -l`  Lists files in long format (file name, size, modified date and time, author, permission, etc.)
-`ls -lh` Difference with l is that sizes of files are 'human readable' (B, K, M etc.)
-`ls -lah`  Same as above, but also includes files/directories beginning with '.'
-`ls -t`  Sort by time, most recently modified
-`ls -Glp`  List with color (CLICOLOR) based on file type in long format with backslashes at the end of directories
+ls      Lists files and directories at current or ~ location
+ls -a   Lists all files, does not ignore those starting with '.'
+ls -l   Lists files in long format (file name, size, modified date and time, author, permission, etc.)
+ls -lh  Difference with l is that sizes of files are 'human readable' (B, K, M etc.)
+ls -lah Same as above, but also includes files/directories beginning with '.'
+ls -t   Sort by time, most recently modified
+ls -Glp List with color (CLICOLOR) based on file type in long format with backslashes at the end of directories
 ```
 ---
 
@@ -54,14 +54,14 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > 
+> > My five ls options:
 ```
-`ls -R` list files and directories, also list subdirectories
-`ls -1` list each file on a new line
-`ls -m` list each file in a comma separated list
-`ls -p` list each directory with a '/' at the end
-`ls -i` list file's serial number (unix inode number)
-
+ls -R list files and directories, also list subdirectories
+ls -1 list each file on a new line
+ls -m list each file in a comma separated list
+ls -p list each directory with a '/' at the end
+ls -i list file's serial number (unix inode number)
+```
 ---
 
 ###Q4.  Xargs   
