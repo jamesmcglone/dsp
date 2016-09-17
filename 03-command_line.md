@@ -68,7 +68,9 @@ ls -i list file's serial number (unix inode number)
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
- 
+> > 'xargs' takes stdin and executes a chosen command on it.
+```
+Example: find . -name "*.py" | xargs rm -rf
+*Find all files with .py and delete them.
+```
 
