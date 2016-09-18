@@ -44,9 +44,9 @@ def front_x(words):
  
     return sorted(x_words) + sorted(other_words)
 
-front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
-front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
-front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
+#front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
+#front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
+#front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
 
 def sort_last(tuples):
     """
