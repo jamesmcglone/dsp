@@ -12,7 +12,9 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Both are sequences and are indexed by integers. Tuples differ from lists as they are immutable and use parentheses instead of square brackets. 
+
+Tuples work as keys in dictionaries. Since dictionaries are implemented using hashtables, keys need to be hashable, i.e. taking a value of any kind will return an integer. Lists cannot be used as keys, their mutability would cause problems in searching the dictionary hashtable after keys are modified. Multiple keys could have the same entry or a key could no longer be found. Since a tuple's values cannot be changed, they provide appropriate keys for dictionaries.
 
 ---
 
@@ -20,7 +22,26 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists are ordered collections of elements whereas sets are unordered collections of unique (no duplicates) and immutable objects.
+
+List Example:
+
+```
+animals = ['dog', 'cat', 'mouse']
+animals.append('cat')
+
+print animals
+```
+
+Set Example:
+
+```
+prime_set = {13, 7, 3, 5, 17}
+prime_set.add(7)
+
+print prime_set
+```
+For finding an element, the performance of sets is faster than lists. Using a hash function, one can map to an element's bucket. In lists, each element contained therein would need to be compared sequentially.
 
 ---
 
@@ -28,15 +49,38 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> It allows for the creation of anonymous functions. `Lambda` is often used to apply functional concepts.
+```
+fruit_inventory = {'apple': 5, 'orange': 10, 'banana': 3}
+sorted(fruit_inventory, key=lambda fruit: fruit[1]) #sort by number of fruit pieces
+```
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are used to construct lists in a concise manner. Operations are used to create an iterable list or one that meets specific criteria. 
+Example of `map` with equivalent
+```
+cubes = [x**3 for x in range(10)] #more concise and readable than 'map' equivalent below
+
+cubes = map(lambda x: x**2, range(10))
+
+```
+Example of `filter` with equivalent
+```
+number_list = range(10)
+even_num = [x for x in number_list if x % 2 == 0] # more concise and faster than the 'filter' equivalent below
+
+even_num = filter(lambda x: x % 2 == 0, number_list)
+```
+Set and Dictionary comprehensions, respectively:
+```
+s = { x for x in range(10) } #Set comprehension
+
+d = {v: True for v in range(10)} #Dictionary comprehension
+```
 
 ---
 
