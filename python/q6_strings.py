@@ -8,7 +8,7 @@ def donuts(count):
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
+    
     >>> donuts(4)
     'Number of donuts: 4'
     >>> donuts(9)
@@ -18,8 +18,18 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
 
+    if count < 10:
+    	return 'Number of donuts: %d' % count
+    elif count >= 10:
+    	return 'Number of donuts: many'
+    else:
+    	print "ERROR"
+
+#print donuts(4)
+#print donuts(9)
+#print donuts(10)
+#print donuts(99)
 
 def both_ends(s):
     """
@@ -37,8 +47,17 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    word_length = len(s)
 
+    if word_length < 2:
+    	return ''
+    elif word_length >= 2:
+    	return s[:2] + s[-2:]
+    else:
+    	print "ERROR"
+
+#new_thing = raw_input('> ')
+#print both_ends(new_thing)
 
 def fix_start(s):
     """
@@ -56,11 +75,32 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    slist = list(s)
+    first = slist[0]
+    new_list = []
+    new_string =''
+    counter = 0
+
+    
+    for c in range(len(slist)):
+    	
+    	if (counter > 0) and (slist[c] == first):
+    		slist[c] = '*'
+    		new_list.append(slist[c])
+    	else:
+    		new_list.append(slist[c])
+    	counter += 1
+    return new_string.join(new_list)    	
+
+#fix_start('babble')
+#fix_start('aardvark')
+#fix_start('google')
+#fix_start('donut')
 
 
 def mix_up(a, b):
-    """
+
+	"""
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
     each string. Assume a and b are length 2 or more.
@@ -74,7 +114,17 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+
+	heada = a[:2]
+	headb = b[:2]
+	taila = a[2:]
+	tailb = b[2:]
+	return '%s%s %s%s' % (headb, taila, heada, tailb)
+
+#mix_up('mix', 'pod')
+#mix_up('dog', 'dinner')
+#mix_up('gnash', 'sport')
+#mix_up('pezzy', 'firm')
 
 
 def verbing(s):
@@ -91,8 +141,20 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
 
+    if len(s) > 2:
+    	if s[-3:] != 'ing':
+    		return s + 'ing'
+    	else:
+    		return s + 'ly'
+    else: 
+    	return s
+
+#verbing('hail')
+#verbing('swiming')
+#verbing('do')
+
+import re
 
 def not_bad(s):
     """
@@ -111,8 +173,31 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
 
+    slist = re.split('(\W+)', s)
+    new_string = ''
+    	
+    bad_num = 0
+    not_num = 0
+
+    for w in range(len(slist)):
+    	
+    	if slist[w] == 'bad':
+    		bad_num = w
+    	elif slist[w] == 'not':
+    		not_num = w
+
+    if bad_num > not_num:
+    	slist[bad_num] = 'good'
+    	del slist[not_num:bad_num]
+    
+    return new_string.join(slist)
+
+
+#print not_bad('This movie is not so bad')
+#print not_bad('This dinner is not that bad!')
+#print not_bad('This tea is not hot')
+#print not_bad("It's bad yet not")
 
 def front_back(a, b):
     """
@@ -130,4 +215,24 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+
+    if len(a) % 2 == 0:
+    	ahead = a[:len(a)/2]
+    	aback = a[len(a)/2:]
+    else:
+    	ahead = a[:(len(a)/2)+1]
+    	aback = a[(len(a)/2)+1:]
+
+    if len(b) % 2 == 0:
+    	bhead = b[:len(b)/2]
+    	bback = b[len(b)/2:]
+    else:
+    	bhead = b[:(len(b)/2)+1]
+    	bback = b[(len(b)/2)+1:]
+
+    return ahead+bhead+aback+bback
+
+
+print front_back('abcd', 'xy')
+print front_back('abcde', 'xyz')
+print front_back('Kitten', 'Donut')
