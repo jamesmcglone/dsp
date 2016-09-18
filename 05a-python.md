@@ -61,6 +61,7 @@ sorted(fruit_inventory, key=lambda fruit: fruit[1]) #sort by number of fruit pie
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
 >> List comprehensions are used to construct lists in a concise manner. Operations are used to create an iterable list or one that meets specific criteria. 
+
 Example of `map` with equivalent
 ```
 cubes = [x**3 for x in range(10)] #more concise and readable than 'map' equivalent below
@@ -68,6 +69,7 @@ cubes = [x**3 for x in range(10)] #more concise and readable than 'map' equivale
 cubes = map(lambda x: x**2, range(10))
 
 ```
+
 Example of `filter` with equivalent
 ```
 number_list = range(10)
@@ -75,6 +77,7 @@ even_num = [x for x in number_list if x % 2 == 0] # more concise and faster than
 
 even_num = filter(lambda x: x % 2 == 0, number_list)
 ```
+
 Set and Dictionary comprehensions, respectively:
 ```
 s = { x for x in range(10) } #Set comprehension
