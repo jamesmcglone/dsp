@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> Emacs, comparing the learning curve with vim was the deciding factor.
+>> Vim, after a brief comparison and the annoying over ctrl use of emacs, vim felt more natural.
 
 --
 
