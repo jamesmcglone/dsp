@@ -103,6 +103,8 @@ Go to your terminal. If you type `$ git status`, you should get a message like t
 This means that you have **modified** the files that appear there. This is what is called the **staging** area. Any files you modify will appear here. 
 
 
+**Testing line here**
+
 **5b. `git add`**
 
 If you are ready with the changes, then it's time to `git add` the files. 
